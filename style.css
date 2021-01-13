@@ -1,0 +1,38 @@
+/* Basic CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+
+.pad {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin : 0 auto;
+    padding: 1em;
+    height: 25vh;
+    width: 25vw;
+    background: gray;
+    border: 2px solid black;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: blue;
+    width: 5em;
+    height: 5em;
+    border-radius: .5em;
+}
+
+.button:hover {
+    background: red;
+}
+
+.button:active {
+    background: green;
+}
