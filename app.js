@@ -14,14 +14,24 @@ sine.start();
 sine.connect(volume);
 
 // Function to start and stop the sound
-const beep = () => {
+// const beep = () => {
 
-    console.log("Hi from your Beep!");
+//     console.log("Hi from your Beep!");
+//     volume.gain.value = 1;
+//     setTimeout(stop, 250);
+
+
+//     function stop() {
+//         volume.gain.value = 0;
+//     }
+// }
+
+// Turns the volume up
+const beepStart = () => {
     volume.gain.value = 1;
-    setTimeout(stop, 1000);
+}
 
-
-    function stop() {
-        volume.gain.value = 0;
-    }
+// Turns the volume down
+const beepStop = () => {
+    volume.gain.value = 0;
 }
