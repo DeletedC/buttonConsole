@@ -43,13 +43,13 @@ beepE.start();
 const beepStart = (id) => {
 
     switch (id) {
-        case 1:
+        case '1':
             beepC.connect(volume);
             break;
-        case 2:
+        case '2':
             beepD.connect(volume);
             break;
-        case 3:
+        case '3':
             beepE.connect(volume);
             break;
         default:
@@ -60,13 +60,13 @@ const beepStart = (id) => {
 // Disconnects a note
 const beepStop = (id) => {
     switch (id) {
-        case 1:
+        case '1':
             beepC.disconnect();
             break;
-        case 2:
+        case '2':
             beepD.disconnect();
             break;
-        case 3:
+        case '3':
             beepE.disconnect();
             break;
         default:
