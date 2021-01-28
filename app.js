@@ -128,3 +128,39 @@ const beepStop = (id) => {
             alert("SWITCH DEFAULT: Something wasn't caught in the disconnection.");
     }
 }
+
+// KEYBOARD LOGIC
+// Goal: be able to manipulate the sound pad using only arrow keys and spacebar
+
+let active = null;
+
+// Checks for the active div
+const isActive = (id) => {
+    active = id;
+    console.log(active);
+}
+
+document.addEventListener('keydown', keyDownHandler);
+document.addEventListener('keyup', keyUpHandler);
+
+function keyUpHandler(event) {
+    switch (event.keycode) {
+        // Up key
+        case 38:
+            break;
+        // Down key
+        case 40:
+            break;
+        // Left key
+        case 37:
+            break;
+        // Right key
+        case 39:
+            break;
+        // Spacebar
+        case 32:
+            break;
+        default:
+            break;
+    }
+}
