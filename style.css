@@ -63,3 +63,28 @@ html {
     background: rgb(0, 0, 104);
     color: white;
 }
+
+@media only screen and (max-width: 768px) {
+    #main {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    #header {
+        font-size: 2rem;
+    }
+    .pad {
+        width: 75%;
+        height: 75%;
+    }
+
+    .button {
+        width: 6em;
+        height: 6em;
+        margin: 1em;
+        border: .25em solid black;
+
+        font-size: 1.25em;
+        font-weight: bold;
+    }
+}
