@@ -1,4 +1,4 @@
-const beeper = new (window.AudioContext || window.webkitAudioContext);
+const beeper = new (window.AudioContext || window.webkitAudioContext)();
 
 // Creating a sine wav and volume
 // Connecting the volume to the DOM
