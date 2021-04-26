@@ -1,5 +1,5 @@
 # Button Console
-###[Live Site](https://buttonconsole.netlify.app/)
+[Live Site](https://buttonconsole.netlify.app/)
 
 This is a small project to try out making sounds with JavaScript's Web Audio API. A few buttons here, some noises there.
 
