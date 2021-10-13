@@ -1,4 +1,5 @@
-const beeper = new (window.AudioContext || window.webkitAudioContext)();
+const AudioContext = window.AudioContext || window.webkitAudioContext;
+const beeper = new AudioContext();
 
 // Creating a sine wav and volume
 // Connecting the volume to the DOM
@@ -140,7 +141,7 @@ const isActive = (id) => {
     console.log(active);
 }
 
-document.addEventListener('keydown', keyDownHandler);
+// document.addEventListener('keydown', keyDownHandler);
 document.addEventListener('keyup', keyUpHandler);
 
 function keyUpHandler(event) {
