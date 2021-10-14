@@ -165,3 +165,24 @@ function keyUpHandler(event) {
             break;
     }
 }
+
+// Start and Stop button. Needed for Chrome or else the sound won't start
+const soundOnOff = () => {
+    const onOffButton = document.getElementById("startStopButton");
+
+    if (beeper.state == "suspended") {
+        // Resume sound
+        // Change button text to STOP
+        // Change CSS to STOP color
+        beeper.resume();
+
+        onOffButton.innerHTML = "STOP";
+    } else {
+        // Suspend sound
+        // Change button text to START
+        // Change CSS to START color
+        beeper.suspend();
+
+        onOffButton.innerHTML = "START";
+    }
+}
