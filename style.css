@@ -11,16 +11,26 @@ html {
     background: rgba(172, 172, 172, 0.2);
 }
 
+table {
+    height: 100%;
+    width: 100%;
+}
+
 #main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0 auto;
-    width: 80vw;
+    width: 100vw;
+    height: 100vh;
+    padding-bottom: 2em;
 }
 #header {
     font-size: 4rem;
     text-align: center;
     width: 100%;
-    height: 10vh;
-    margin: 1em 0em 1.5em 0em;
+    /* height: 10vh; */
+    margin: 10% auto;
 }
 
 #header > h1 {
@@ -32,16 +42,16 @@ html {
 }
 .pad {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    /* flex-wrap: wrap; */
+    justify-content: center;
     align-items: center;
     margin : 0 auto;
-    padding: 1em;
-    height: 25%;
-    width: 100%;
-    border-radius: 10%;
+    /* padding: 10vh; */
+    height: 80%;
+    width: 90%;
+    border-radius: 10px;
     background: gray;
-    border: .5em solid black;
+    border: 5px solid black;
 }
 
 .button {
@@ -49,10 +59,10 @@ html {
     justify-content: center;
     align-items: center;
     background: blue;
-    width: 5em;
-    height: 5em;
+    width: 90%;
+    height: 90%;
     border-radius: .5em;
-    margin: 2em;
+    margin: 0 auto;
 }
 
 .button:hover {
