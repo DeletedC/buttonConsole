@@ -1,6 +1,11 @@
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 const beeper = new AudioContext();
 
+// Suspends sound to start in an off state
+// Chrome will do this automatically
+// This is so it will be the same in other browsers
+beeper.suspend();
+
 // Creating a sine wav and volume
 // Connecting the volume to the DOM
 const beepC = beeper.createOscillator();
@@ -58,6 +63,27 @@ beepD6.start();
 //         volume.gain.value = 0;
 //     }
 // }
+
+// Start and Stop button. Needed for Chrome or else the sound won't start
+const soundOnOff = () => {
+    const onOffButton = document.getElementById("startStopButton");
+
+    if (beeper.state == "suspended") {
+        // Resume sound
+        // Change button text to STOP
+        // Change CSS to STOP color
+        beeper.resume();
+
+        onOffButton.innerHTML = "STOP";
+    } else {
+        // Suspend sound
+        // Change button text to START
+        // Change CSS to START color
+        beeper.suspend();
+
+        onOffButton.innerHTML = "START";
+    }
+}
 
 // Connects a note
 const beepStart = (id) => {
@@ -166,23 +192,3 @@ function keyUpHandler(event) {
     }
 }
 
-// Start and Stop button. Needed for Chrome or else the sound won't start
-const soundOnOff = () => {
-    const onOffButton = document.getElementById("startStopButton");
-
-    if (beeper.state == "suspended") {
-        // Resume sound
-        // Change button text to STOP
-        // Change CSS to STOP color
-        beeper.resume();
-
-        onOffButton.innerHTML = "STOP";
-    } else {
-        // Suspend sound
-        // Change button text to START
-        // Change CSS to START color
-        beeper.suspend();
-
-        onOffButton.innerHTML = "START";
-    }
-}
