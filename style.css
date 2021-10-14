@@ -70,50 +70,29 @@ table {
 }
 
 .button:active {
-    background: rgb(0, 0, 104);
+    /* background: rgb(0, 0, 104); */
+    background: rgb(0, 162, 255);
     color: white;
 }
 
 @media only screen and (max-width: 767px) {
 
     .pad {
-        display: flex;
-        /* flex-wrap: wrap; */
-        justify-content: center;
-        align-items: center;
-        margin : 0 auto;
-        /* padding: 10vh; */
         height: 80%;
         width: 90%;
-        border-radius: 10px;
-        background: gray;
-        border: 5px solid black;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
 
     .pad {
-        display: flex;
-        /* flex-wrap: wrap; */
-        justify-content: center;
-        align-items: center;
-        margin : 0 auto;
-        /* padding: 10vh; */
         height: 80%;
         width: 90%;
-        border-radius: 10px;
-        background: gray;
-        border: 5px solid black;
     }
 }
 
 @media screen and (min-width: 100vh) and (max-height: 768px) {
     #main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0 auto;
         width: 100vw;
         height: 100vh;
         /* background-color: red; */
