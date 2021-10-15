@@ -75,6 +75,20 @@ table {
     color: white;
 }
 
+#muteButton {
+    padding: 2px 20px;
+    margin-bottom: 1em;
+    font-size: .5em;
+}
+
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
+}
+
 @media only screen and (max-width: 767px) {
 
     .pad {

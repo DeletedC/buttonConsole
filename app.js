@@ -66,7 +66,7 @@ beepD6.start();
 
 // Start and Stop button. Needed for Chrome or else the sound won't start
 const soundOnOff = () => {
-    const onOffButton = document.getElementById("startStopButton");
+    const muteButton = document.getElementById("muteButton");
 
     if (beeper.state == "suspended") {
         // Resume sound
@@ -74,14 +74,16 @@ const soundOnOff = () => {
         // Change CSS to STOP color
         beeper.resume();
 
-        onOffButton.innerHTML = "STOP";
+        muteButton.innerHTML = "MUTE";
+        muteButton.classList.add('red');
     } else {
         // Suspend sound
         // Change button text to START
         // Change CSS to START color
         beeper.suspend();
 
-        onOffButton.innerHTML = "START";
+        muteButton.innerHTML = "UNMUTE";
+        muteButton.classList.remove('red');
     }
 }
 
