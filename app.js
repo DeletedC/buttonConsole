@@ -52,8 +52,16 @@ const beepB = beeper7.createOscillator();
 const beepC6 = beeper8.createOscillator();
 const beepD6 = beeper9.createOscillator();
 
-const volume = beeper.createGain();
-volume.connect(beeper.destination);
+let volume1, volume2, volume3, volume4, volume5, volume6, volume7, volume8, volume9;
+const volumeArray = [volume1, volume2, volume3, volume4, volume5, volume6, volume7, volume8, volume9];
+
+for (let x = 0; x < beeperArray.length; x++) {
+    volumeArray[x] = beeperArray[x].createGain();
+    volumeArray[x].connect(beeperArray[x].destination);
+}
+
+// const volume = beeper.createGain();
+// volume.connect(beeper.destination);
 
 
 // Setting note frequencies
@@ -102,11 +110,13 @@ beepD6.start();
 const soundOnOff = () => {
     const muteButton = document.getElementById("muteButton");
 
-    if (beeper.state == "suspended") {
+    if (beeper1.state == "suspended") {
         // Resume sound
         // Change button text to STOP
         // Change CSS to STOP color
-        beeper.resume();
+        
+        // beeper.resume();
+        resumeAll();
 
         muteButton.innerHTML = "MUTE";
         muteButton.classList.add('red');
@@ -114,7 +124,9 @@ const soundOnOff = () => {
         // Suspend sound
         // Change button text to START
         // Change CSS to START color
-        beeper.suspend();
+        
+        // beeper.suspend();
+        suspendAll();
 
         muteButton.innerHTML = "UNMUTE";
         muteButton.classList.remove('red');
@@ -126,31 +138,31 @@ const beepStart = (id) => {
 
     switch (id) {
         case '1':
-            beepC.connect(volume);
+            beepC.connect(volume1);
             break;
         case '2':
-            beepD.connect(volume);
+            beepD.connect(volume2);
             break;
         case '3':
-            beepE.connect(volume);
+            beepE.connect(volume3);
             break;
         case '4':
-            beepF.connect(volume);
+            beepF.connect(volume4);
             break;
         case '5':
-            beepG.connect(volume);
+            beepG.connect(volume5);
             break;
         case '6':
-            beepA.connect(volume);
+            beepA.connect(volume6);
             break;
         case '7':
-            beepB.connect(volume);
+            beepB.connect(volume7);
             break;
         case '8':
-            beepC6.connect(volume);
+            beepC6.connect(volume8);
             break;
         case '9':
-            beepD6.connect(volume);
+            beepD6.connect(volume9);
             break;
         default:
             alert("SWITCH DEFAULT: Something wasn't caught in the connection.");
