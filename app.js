@@ -225,19 +225,19 @@ const beepStart = (id) => {
             beepC6.connect(gainC6);
             break;
         case 'Db':
-            beepD6.connect(gainDb);
+            beepDb.connect(gainDb);
             break;
         case 'Eb':
-            beepD6.connect(gainEb);
+            beepEb.connect(gainEb);
             break;
         case 'Gb':
-            beepD6.connect(gainGb);
+            beepGb.connect(gainGb);
             break;
         case 'Ab':
-            beepD6.connect(gainAb);
+            beepAb.connect(gainAb);
             break;
         case 'Bb':
-            beepD6.connect(gainBb);
+            beepBb.connect(gainBb);
             break;   
         default:
             alert("SWITCH DEFAULT: Something wasn't caught in the connection.");
