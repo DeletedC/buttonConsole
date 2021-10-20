@@ -78,34 +78,34 @@ const beepBb = beeper13.createOscillator();
 // }
 
 // Creates gain nodes for each note
-const volume1 = beeper1.createGain();
-const volume2 = beeper2.createGain();
-const volume3 = beeper3.createGain();
-const volume4 = beeper4.createGain();
-const volume5 = beeper5.createGain();
-const volume6 = beeper6.createGain();
-const volume7 = beeper7.createGain();
-const volume8 = beeper8.createGain();
-const volume9 = beeper9.createGain();
-const volume10 = beeper10.createGain();
-const volume11 = beeper11.createGain();
-const volume12 = beeper12.createGain();
-const volume13 = beeper13.createGain();
+const gainC = beeper1.createGain();
+const gainD = beeper2.createGain();
+const gainE = beeper3.createGain();
+const gainF = beeper4.createGain();
+const gainG = beeper5.createGain();
+const gainA = beeper6.createGain();
+const gainB = beeper7.createGain();
+const gainC6 = beeper8.createGain();
+const gainDb = beeper9.createGain();
+const gainEb = beeper10.createGain();
+const gainGb = beeper11.createGain();
+const gainAb = beeper12.createGain();
+const gainBb = beeper13.createGain();
 
 // Connects gain nodes for each note
-volume1.connect(beeper1.destination);
-volume2.connect(beeper2.destination);
-volume3.connect(beeper3.destination);
-volume4.connect(beeper4.destination);
-volume5.connect(beeper5.destination);
-volume6.connect(beeper6.destination);
-volume7.connect(beeper7.destination);
-volume8.connect(beeper8.destination);
-volume9.connect(beeper9.destination);
-volume10.connect(beeper10.destination);
-volume11.connect(beeper11.destination);
-volume12.connect(beeper12.destination);
-volume13.connect(beeper13.destination);
+gainC.connect(beeper1.destination);
+gainD.connect(beeper2.destination);
+gainE.connect(beeper3.destination);
+gainF.connect(beeper4.destination);
+gainG.connect(beeper5.destination);
+gainA.connect(beeper6.destination);
+gainB.connect(beeper7.destination);
+gainC6.connect(beeper8.destination);
+gainDb.connect(beeper9.destination);
+gainEb.connect(beeper10.destination);
+gainGb.connect(beeper11.destination);
+gainAb.connect(beeper12.destination);
+gainBb.connect(beeper13.destination);
 
 
 
@@ -200,31 +200,31 @@ const beepStart = (id) => {
 
     switch (id) {
         case '1':
-            beepC.connect(volume1);
+            beepC.connect(gainC);
             break;
         case '2':
-            beepD.connect(volume2);
+            beepD.connect(gainD);
             break;
         case '3':
-            beepE.connect(volume3);
+            beepE.connect(gainE);
             break;
         case '4':
-            beepF.connect(volume4);
+            beepF.connect(gainF);
             break;
         case '5':
-            beepG.connect(volume5);
+            beepG.connect(gainG);
             break;
         case '6':
-            beepA.connect(volume6);
+            beepA.connect(gainA);
             break;
         case '7':
-            beepB.connect(volume7);
+            beepB.connect(gainB);
             break;
         case '8':
-            beepC6.connect(volume8);
+            beepC6.connect(gainC6);
             break;
         case '9':
-            beepD6.connect(volume9);
+            beepD6.connect(gainDb);
             break;
         default:
             alert("SWITCH DEFAULT: Something wasn't caught in the connection.");
