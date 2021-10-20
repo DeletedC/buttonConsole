@@ -199,6 +199,8 @@ const soundOnOff = () => {
 // Connects a note
 const beepStart = (id) => {
 
+    console.log(id + ' starting');
+
     switch (id) {
         case 'C':
             beepC.connect(gainC);
@@ -240,42 +242,57 @@ const beepStart = (id) => {
             beepBb.connect(gainBb);
             break;   
         default:
-            alert("SWITCH DEFAULT: Something wasn't caught in the connection.");
+            console.log("SWITCH DEFAULT: Something wasn't caught in the connection.");
     }
 }
 
 // Disconnects a note
 const beepStop = (id) => {
+    
+    console.log(id + ' stopping');
+
     switch (id) {
-        case '1':
+        case 'C':
             beepC.disconnect();
             break;
-        case '2':
+        case 'D':
             beepD.disconnect();
             break;
-        case '3':
+        case 'E':
             beepE.disconnect();
             break;
-        case '4':
+        case 'F':
             beepF.disconnect();
             break;
-        case '5':
+        case 'G':
             beepG.disconnect();
             break;
-        case '6':
+        case 'A':
             beepA.disconnect();
             break;
-        case '7':
+        case 'B':
             beepB.disconnect();
             break;
-        case '8':
+        case 'C6':
             beepC6.disconnect();
             break;
-        case '9':
-            beepD6.disconnect();
+        case 'Db':
+            beepDb.disconnect();
             break;
+        case 'Eb':
+            beepEb.disconnect();
+            break;
+        case 'Gb':
+            beepGb.disconnect();
+            break;
+        case 'Ab':
+            beepAb.disconnect();
+            break;
+        case 'Bb':
+            beepBb.disconnect();
+            break; 
         default:
-            alert("SWITCH DEFAULT: Something wasn't caught in the disconnection.");
+            console.log("SWITCH DEFAULT: Something wasn't caught in the disconnection.");
     }
 }
 
