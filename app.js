@@ -52,13 +52,36 @@ const beepB = beeper7.createOscillator();
 const beepC6 = beeper8.createOscillator();
 const beepD6 = beeper9.createOscillator();
 
-let volume1, volume2, volume3, volume4, volume5, volume6, volume7, volume8, volume9;
-const volumeArray = [volume1, volume2, volume3, volume4, volume5, volume6, volume7, volume8, volume9];
+// let volume1, volume2, volume3, volume4, volume5, volume6, volume7, volume8, volume9;
+// const volumeArray = [volume1, volume2, volume3, volume4, volume5, volume6, volume7, volume8, volume9];
 
-for (let x = 0; x < beeperArray.length; x++) {
-    volumeArray[x] = beeperArray[x].createGain();
-    volumeArray[x].connect(beeperArray[x].destination);
-}
+// Creates and connects gain nodes for each note
+// for (let x = 0; x < beeperArray.length; x++) {
+//     volumeArray[x] = beeperArray[x].createGain();
+//     volumeArray[x].connect(beeperArray[x].destination);
+// }
+
+// Creates gain nodes for each note
+const volume1 = beeper1.createGain();
+const volume2 = beeper2.createGain();
+const volume3 = beeper3.createGain();
+const volume4 = beeper4.createGain();
+const volume5 = beeper5.createGain();
+const volume6 = beeper6.createGain();
+const volume7 = beeper7.createGain();
+const volume8 = beeper8.createGain();
+const volume9 = beeper9.createGain();
+
+// Connects gain nodes for each note
+volume1.connect(beeper1.destination);
+volume2.connect(beeper2.destination);
+volume3.connect(beeper3.destination);
+volume4.connect(beeper4.destination);
+volume5.connect(beeper5.destination);
+volume6.connect(beeper6.destination);
+volume7.connect(beeper7.destination);
+volume8.connect(beeper8.destination);
+volume9.connect(beeper9.destination);
 
 // const volume = beeper.createGain();
 // volume.connect(beeper.destination);
