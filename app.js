@@ -1,22 +1,56 @@
 const AudioContext = window.AudioContext || window.webkitAudioContext;
-const beeper = new AudioContext();
+const beeper1,
+beeper2,
+beeper3,
+beeper4,
+beeper5,
+beeper6,
+beeper7,
+beeper8,
+beeper9 = new AudioContext();
+
+beeperArray = [
+    beeper1,
+    beeper2,
+    beeper3,
+    beeper4,
+    beeper5,
+    beeper6,
+    beeper7,
+    beeper8,
+    beeper9
+]
 
 // Suspends sound to start in an off state
 // Chrome will do this automatically
 // This is so it will be the same in other browsers
-beeper.suspend();
+const suspendAll = () => {
+    for (let beeper of beeperArray) {
+        beeper.suspend();
+    }
+}
+
+const resumeAll = () => {
+    for (let beeper of beeperArray) {
+        beeper.resume();
+    }
+}
+
+suspendAll();
+
+
 
 // Creating a sine wav and volume
 // Connecting the volume to the DOM
-const beepC = beeper.createOscillator();
-const beepD = beeper.createOscillator();
-const beepE = beeper.createOscillator();
-const beepF = beeper.createOscillator();
-const beepG = beeper.createOscillator();
-const beepA = beeper.createOscillator();
-const beepB = beeper.createOscillator();
-const beepC6 = beeper.createOscillator();
-const beepD6 = beeper.createOscillator();
+const beepC = beeper1.createOscillator();
+const beepD = beeper2.createOscillator();
+const beepE = beeper3.createOscillator();
+const beepF = beeper4.createOscillator();
+const beepG = beeper5.createOscillator();
+const beepA = beeper6.createOscillator();
+const beepB = beeper7.createOscillator();
+const beepC6 = beeper8.createOscillator();
+const beepD6 = beeper9.createOscillator();
 
 const volume = beeper.createGain();
 volume.connect(beeper.destination);
