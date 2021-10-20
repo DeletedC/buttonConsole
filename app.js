@@ -8,6 +8,10 @@ const beeper6 = new AudioContext();
 const beeper7 = new AudioContext(); 
 const beeper8 = new AudioContext(); 
 const beeper9 = new AudioContext();
+const beeper10 = new AudioContext();
+const beeper11 = new AudioContext();
+const beeper12 = new AudioContext();
+const beeper13 = new AudioContext();
 
 beeperArray = [
     beeper1,
@@ -18,7 +22,11 @@ beeperArray = [
     beeper6,
     beeper7,
     beeper8,
-    beeper9
+    beeper9,
+    beeper10,
+    beeper11,
+    beeper12,
+    beeper13
 ]
 
 // Suspends sound to start in an off state
@@ -42,6 +50,8 @@ suspendAll();
 
 // Creating a sine wav and volume
 // Connecting the volume to the DOM
+
+// Whole tones
 const beepC = beeper1.createOscillator();
 const beepD = beeper2.createOscillator();
 const beepE = beeper3.createOscillator();
@@ -50,7 +60,13 @@ const beepG = beeper5.createOscillator();
 const beepA = beeper6.createOscillator();
 const beepB = beeper7.createOscillator();
 const beepC6 = beeper8.createOscillator();
-const beepD6 = beeper9.createOscillator();
+
+// Half tones
+const beepDb = beeper9.createOscillator();
+const beepEb = beeper10.createOscillator();
+const beepGb = beeper11.createOscillator();
+const beepAb = beeper12.createOscillator();
+const beepBb = beeper13.createOscillator();
 
 // let volume1, volume2, volume3, volume4, volume5, volume6, volume7, volume8, volume9;
 // const volumeArray = [volume1, volume2, volume3, volume4, volume5, volume6, volume7, volume8, volume9];
@@ -71,6 +87,10 @@ const volume6 = beeper6.createGain();
 const volume7 = beeper7.createGain();
 const volume8 = beeper8.createGain();
 const volume9 = beeper9.createGain();
+const volume10 = beeper10.createGain();
+const volume11 = beeper11.createGain();
+const volume12 = beeper12.createGain();
+const volume13 = beeper13.createGain();
 
 // Connects gain nodes for each note
 volume1.connect(beeper1.destination);
@@ -82,12 +102,20 @@ volume6.connect(beeper6.destination);
 volume7.connect(beeper7.destination);
 volume8.connect(beeper8.destination);
 volume9.connect(beeper9.destination);
+volume10.connect(beeper10.destination);
+volume11.connect(beeper11.destination);
+volume12.connect(beeper12.destination);
+volume13.connect(beeper13.destination);
+
+
 
 // const volume = beeper.createGain();
 // volume.connect(beeper.destination);
 
 
 // Setting note frequencies
+
+// Whole tones
 beepC.frequency.value = 523.25;
 beepD.frequency.value = 587.33;
 beepE.frequency.value = 659.25;
@@ -96,7 +124,13 @@ beepG.frequency.value = 783.99;
 beepA.frequency.value = 880.00;
 beepB.frequency.value = 987.77;
 beepC6.frequency.value = 1046.50;
-beepD6.frequency.value = 1174.66;
+
+// Half tones
+beepDb.frequency.value = 554.37;
+beepEb.frequency.value = 622.25;
+beepGb.frequency.value = 739.99;
+beepAb.frequency.value = 830.61;
+beepBb.frequency.value = 932.33;
 
 // Setting the volume to 0
 // volume.gain.value = 0;
@@ -110,7 +144,12 @@ beepG.start();
 beepA.start();
 beepB.start();
 beepC6.start();
-beepD6.start();
+
+beepDb.start();
+beepEb.start();
+beepGb.start();
+beepAb.start();
+beepBb.start();
 
 // beepC.connect(volume);
 // beepD.connect(volume);
