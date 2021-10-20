@@ -1,13 +1,13 @@
 const AudioContext = window.AudioContext || window.webkitAudioContext;
-const beeper1,
-beeper2,
-beeper3,
-beeper4,
-beeper5,
-beeper6,
-beeper7,
-beeper8,
-beeper9 = new AudioContext();
+const beeper1 = new AudioContext();
+const beeper2 = new AudioContext(); 
+const beeper3 = new AudioContext(); 
+const beeper4 = new AudioContext(); 
+const beeper5 = new AudioContext(); 
+const beeper6 = new AudioContext(); 
+const beeper7 = new AudioContext(); 
+const beeper8 = new AudioContext(); 
+const beeper9 = new AudioContext();
 
 beeperArray = [
     beeper1,
