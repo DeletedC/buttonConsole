@@ -101,6 +101,7 @@ gainG.connect(beeper5.destination);
 gainA.connect(beeper6.destination);
 gainB.connect(beeper7.destination);
 gainC6.connect(beeper8.destination);
+
 gainDb.connect(beeper9.destination);
 gainEb.connect(beeper10.destination);
 gainGb.connect(beeper11.destination);
@@ -199,33 +200,45 @@ const soundOnOff = () => {
 const beepStart = (id) => {
 
     switch (id) {
-        case '1':
+        case 'C':
             beepC.connect(gainC);
             break;
-        case '2':
+        case 'D':
             beepD.connect(gainD);
             break;
-        case '3':
+        case 'E':
             beepE.connect(gainE);
             break;
-        case '4':
+        case 'F':
             beepF.connect(gainF);
             break;
-        case '5':
+        case 'G':
             beepG.connect(gainG);
             break;
-        case '6':
+        case 'A':
             beepA.connect(gainA);
             break;
-        case '7':
+        case 'B':
             beepB.connect(gainB);
             break;
-        case '8':
+        case 'C6':
             beepC6.connect(gainC6);
             break;
-        case '9':
+        case 'Db':
             beepD6.connect(gainDb);
             break;
+        case 'Eb':
+            beepD6.connect(gainEb);
+            break;
+        case 'Gb':
+            beepD6.connect(gainGb);
+            break;
+        case 'Ab':
+            beepD6.connect(gainAb);
+            break;
+        case 'Bb':
+            beepD6.connect(gainBb);
+            break;   
         default:
             alert("SWITCH DEFAULT: Something wasn't caught in the connection.");
     }
